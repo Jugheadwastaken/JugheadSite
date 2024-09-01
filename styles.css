@@ -1,0 +1,204 @@
+/* styles.css */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Контейнер и стили для элементов */
+.container {
+    text-align: center;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: border-color 0.3s;
+}
+
+.links .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.links .link i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Светлая тема */
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.light .container {
+    background-color: #f7f7f7;
+    color: #000000;
+}
+
+body.light .profile-img {
+    border-color: #000000;
+}
+
+body.light .links .link {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.light .links .link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Темная тема */
+body.dark {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.dark .container {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark .profile-img {
+    border-color: #ffffff;
+}
+
+body.dark .links .link {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark .links .link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Стиль для кнопки переключения темы */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Кнопка для светлой темы */
+body.light #theme-button {
+    background-color: #000000;
+    /* Чёрный фон */
+    color: #ffffff;
+    /* Белый текст */
+}
+
+/* Кнопка для темной темы */
+body.dark #theme-button {
+    background-color: #ffffff;
+    /* Белый фон */
+    color: #000000;
+    /* Чёрный текст */
+}
+
+#theme-button:hover {
+    background-color: #333333;
+    /* Тёмно-серый фон при наведении */
+    color: #ffffff;
+    /* Белый текст при наведении */
+}
+
+/* Стиль для кнопки переключения темы */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light #theme-button {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#theme-button:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .links .link {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
